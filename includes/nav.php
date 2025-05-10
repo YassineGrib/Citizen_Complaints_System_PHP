@@ -18,17 +18,17 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'active' : ''; ?>" href="index.php">
-                        <?php echo __('home'); ?>
+                        <i class="bi bi-house-fill me-1"></i> <?php echo __('home'); ?>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) === 'complaint.php' ? 'active' : ''; ?>" href="complaint.php">
-                        <?php echo __('submit_complaint'); ?>
+                        <i class="bi bi-pencil-square me-1"></i> <?php echo __('submit_complaint'); ?>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo basename($_SERVER['PHP_SELF']) === 'track.php' ? 'active' : ''; ?>" href="track.php">
-                        <?php echo __('track_complaint'); ?>
+                        <i class="bi bi-search me-1"></i> <?php echo __('track_complaint'); ?>
                     </a>
                 </li>
             </ul>
@@ -46,7 +46,7 @@
                 <!-- Language Dropdown -->
                 <li class="nav-item dropdown me-3">
                     <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo __('language'); ?>
+                        <i class="bi bi-translate me-1"></i> <?php echo __('language'); ?>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                         <?php foreach ($available_languages as $code => $name): ?>
@@ -62,7 +62,7 @@
                 <!-- Admin Login -->
                 <li class="nav-item">
                     <a class="nav-link" href="admin/login.php">
-                        <?php echo __('admin_login'); ?>
+                        <i class="bi bi-shield-lock-fill me-1"></i> <?php echo __('admin_login'); ?>
                     </a>
                 </li>
             </ul>

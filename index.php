@@ -148,7 +148,7 @@ if (isset($_GET['setup']) && $_GET['setup'] == 'complete') {
         <div class="container">
             <h1><?php echo __('welcome_message'); ?></h1>
             <p class="lead"><?php echo __('welcome_subtitle'); ?></p>
-            <a href="complaint.php" class="btn btn-primary btn-lg"><?php echo __('get_started'); ?></a>
+            <a href="complaint.php" class="btn btn-primary btn-lg"><i class="bi bi-arrow-right-circle-fill me-2"></i><?php echo __('get_started'); ?></a>
         </div>
     </section>
 

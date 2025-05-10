@@ -194,22 +194,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if ($success): ?>
             <div class="card shadow">
                 <div class="card-header bg-success text-white">
-                    <h4 class="mb-0"><?php echo __('complaint_submitted'); ?></h4>
+                    <h4 class="mb-0"><i class="bi bi-check-circle-fill me-2"></i><?php echo __('complaint_submitted'); ?></h4>
                 </div>
                 <div class="card-body text-center">
                     <p class="lead"><?php echo __('tracking_id_message'); ?></p>
                     <div class="tracking-id"><?php echo $tracking_id; ?></div>
                     <p><?php echo __('track_complaint'); ?> <?php echo __('to_check_status'); ?></p>
                     <div class="mt-4">
-                        <a href="index.php" class="btn btn-primary me-2"><?php echo __('home'); ?></a>
-                        <a href="track.php?tracking_id=<?php echo $tracking_id; ?>" class="btn btn-secondary"><?php echo __('track_complaint'); ?></a>
+                        <a href="index.php" class="btn btn-primary me-2"><i class="bi bi-house-fill me-2"></i><?php echo __('home'); ?></a>
+                        <a href="track.php?tracking_id=<?php echo $tracking_id; ?>" class="btn btn-secondary"><i class="bi bi-search me-2"></i><?php echo __('track_complaint'); ?></a>
                     </div>
                 </div>
             </div>
         <?php else: ?>
             <div class="card shadow">
                 <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0"><?php echo __('complaint_form'); ?></h4>
+                    <h4 class="mb-0"><i class="bi bi-pencil-square me-2"></i><?php echo __('complaint_form'); ?></h4>
                 </div>
                 <div class="card-body">
                     <?php if (isset($errors['db'])): ?>
@@ -218,12 +218,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data">
                         <!-- Personal Information -->
-                        <h5 class="mb-3"><?php echo __('personal_info'); ?></h5>
+                        <h5 class="mb-3"><i class="bi bi-person-badge me-2"></i><?php echo __('personal_info'); ?></h5>
 
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <label for="name" class="form-label"><?php echo __('name'); ?> *</label>
-                                <input type="text" class="form-control <?php echo isset($errors['name']) ? 'is-invalid' : ''; ?>" id="name" name="name" value="" placeholder="<?php echo __('name'); ?>" required>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" class="form-control <?php echo isset($errors['name']) ? 'is-invalid' : ''; ?>" id="name" name="name" value="" placeholder="<?php echo __('name'); ?>" required>
+                                </div>
                                 <?php if (isset($errors['name'])): ?>
                                     <div class="invalid-feedback"><?php echo $errors['name']; ?></div>
                                 <?php endif; ?>
@@ -231,7 +234,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                             <div class="col-md-4">
                                 <label for="email" class="form-label"><?php echo __('email'); ?> *</label>
-                                <input type="email" class="form-control <?php echo isset($errors['email']) ? 'is-invalid' : ''; ?>" id="email" name="email" value="" placeholder="<?php echo __('email'); ?>" required>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                    <input type="email" class="form-control <?php echo isset($errors['email']) ? 'is-invalid' : ''; ?>" id="email" name="email" value="" placeholder="<?php echo __('email'); ?>" required>
+                                </div>
                                 <?php if (isset($errors['email'])): ?>
                                     <div class="invalid-feedback"><?php echo $errors['email']; ?></div>
                                 <?php endif; ?>
@@ -239,7 +245,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                             <div class="col-md-4">
                                 <label for="phone" class="form-label"><?php echo __('phone'); ?> *</label>
-                                <input type="tel" class="form-control <?php echo isset($errors['phone']) ? 'is-invalid' : ''; ?>" id="phone" name="phone" value="" placeholder="<?php echo __('phone'); ?>" required>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                    <input type="tel" class="form-control <?php echo isset($errors['phone']) ? 'is-invalid' : ''; ?>" id="phone" name="phone" value="" placeholder="<?php echo __('phone'); ?>" required>
+                                </div>
                                 <?php if (isset($errors['phone'])): ?>
                                     <div class="invalid-feedback"><?php echo $errors['phone']; ?></div>
                                 <?php endif; ?>
@@ -247,7 +256,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
 
                         <!-- Complaint Information -->
-                        <h5 class="mb-3"><?php echo __('complaint_info'); ?></h5>
+                        <h5 class="mb-3"><i class="bi bi-info-circle-fill me-2"></i><?php echo __('complaint_info'); ?></h5>
 
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -265,7 +274,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                             <div class="col-md-6">
                                 <label for="location" class="form-label"><?php echo __('location'); ?> *</label>
-                                <input type="text" class="form-control <?php echo isset($errors['location']) ? 'is-invalid' : ''; ?>" id="location" name="location" value="" placeholder="<?php echo __('location'); ?>" required>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                                    <input type="text" class="form-control <?php echo isset($errors['location']) ? 'is-invalid' : ''; ?>" id="location" name="location" value="" placeholder="<?php echo __('location'); ?>" required>
+                                </div>
                                 <?php if (isset($errors['location'])): ?>
                                     <div class="invalid-feedback"><?php echo $errors['location']; ?></div>
                                 <?php endif; ?>
@@ -274,7 +286,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="mb-3">
                             <label for="subject" class="form-label"><?php echo __('subject'); ?> *</label>
-                            <input type="text" class="form-control <?php echo isset($errors['subject']) ? 'is-invalid' : ''; ?>" id="subject" name="subject" value="" placeholder="<?php echo __('subject'); ?>" required>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-chat-left-text-fill"></i></span>
+                                <input type="text" class="form-control <?php echo isset($errors['subject']) ? 'is-invalid' : ''; ?>" id="subject" name="subject" value="" placeholder="<?php echo __('subject'); ?>" required>
+                            </div>
                             <?php if (isset($errors['subject'])): ?>
                                 <div class="invalid-feedback"><?php echo $errors['subject']; ?></div>
                             <?php endif; ?>
@@ -282,7 +297,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="mb-3">
                             <label for="description" class="form-label"><?php echo __('description'); ?> *</label>
-                            <textarea class="form-control <?php echo isset($errors['description']) ? 'is-invalid' : ''; ?>" id="description" name="description" rows="5" placeholder="<?php echo __('description'); ?>" required></textarea>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-file-text-fill"></i></span>
+                                <textarea class="form-control <?php echo isset($errors['description']) ? 'is-invalid' : ''; ?>" id="description" name="description" rows="5" placeholder="<?php echo __('description'); ?>" required></textarea>
+                            </div>
                             <?php if (isset($errors['description'])): ?>
                                 <div class="invalid-feedback"><?php echo $errors['description']; ?></div>
                             <?php endif; ?>
@@ -290,7 +308,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="mb-3">
                             <label for="attachment" class="form-label"><?php echo __('attachment'); ?></label>
-                            <input type="file" class="form-control <?php echo isset($errors['attachment']) ? 'is-invalid' : ''; ?>" id="attachment" name="attachment">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-paperclip"></i></span>
+                                <input type="file" class="form-control <?php echo isset($errors['attachment']) ? 'is-invalid' : ''; ?>" id="attachment" name="attachment">
+                            </div>
                             <div class="form-text"><?php echo __('attachment_help'); ?></div>
                             <?php if (isset($errors['attachment'])): ?>
                                 <div class="invalid-feedback"><?php echo $errors['attachment']; ?></div>
@@ -298,8 +319,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
 
                         <div class="d-flex justify-content-between mt-4">
-                            <button type="reset" class="btn btn-secondary"><?php echo __('reset'); ?></button>
-                            <button type="submit" class="btn btn-primary"><?php echo __('submit'); ?></button>
+                            <button type="reset" class="btn btn-secondary"><i class="bi bi-arrow-counterclockwise me-2"></i><?php echo __('reset'); ?></button>
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-send-fill me-2"></i><?php echo __('submit'); ?></button>
                         </div>
                     </form>
                 </div>
