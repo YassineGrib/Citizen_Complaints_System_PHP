@@ -11,6 +11,8 @@ A comprehensive web application for managing and processing citizen complaints. 
 
 ## Overview
 
+![image](https://github.com/user-attachments/assets/6243c24f-e9e6-4fca-b601-75f651e29048)
+
 The Citizen Complaints System is an electronic platform that allows citizens to submit and track complaints and suggestions in an easy and effective manner. The system provides a user-friendly interface for citizens to submit their complaints, and a control panel for administrators to manage and process these complaints.
 
 ## Key Features
