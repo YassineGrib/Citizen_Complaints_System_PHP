@@ -1,7 +1,7 @@
 <?php
 /**
  * English Language File
- * 
+ *
  * This file contains all the translations for the English language.
  */
 
@@ -16,7 +16,7 @@ $translations = [
     'dark_mode' => 'Dark Mode',
     'light_mode' => 'Light Mode',
     'language' => 'Language',
-    
+
     // Homepage
     'welcome_message' => 'Welcome to the Citizen Complaints System',
     'welcome_subtitle' => 'An electronic platform for submitting and tracking citizen complaints',
@@ -30,7 +30,7 @@ $translations = [
     'step_3_desc' => 'Use your tracking ID to check the status of your complaint',
     'step_4' => 'Get notified',
     'step_4_desc' => 'Receive email notifications when your complaint status is updated',
-    
+
     // Complaint Form
     'complaint_form' => 'Complaint Form',
     'personal_info' => 'Personal Information',
@@ -46,7 +46,7 @@ $translations = [
     'attachment_help' => 'Upload photos or documents related to your complaint (Max: 5MB)',
     'submit' => 'Submit',
     'reset' => 'Reset',
-    
+
     // Complaint Types
     'select_type' => 'Select Type',
     'roads' => 'Roads and Infrastructure',
@@ -57,7 +57,7 @@ $translations = [
     'water' => 'Water and Sewage',
     'noise' => 'Noise Pollution',
     'other' => 'Other',
-    
+
     // Tracking
     'tracking_title' => 'Track Your Complaint',
     'tracking_id' => 'Tracking ID',
@@ -67,13 +67,13 @@ $translations = [
     'submission_date' => 'Submission Date',
     'last_update' => 'Last Update',
     'admin_response' => 'Admin Response',
-    
+
     // Status
     'new' => 'New',
     'in_progress' => 'In Progress',
     'resolved' => 'Resolved',
     'rejected' => 'Rejected',
-    
+
     // Admin
     'admin_dashboard' => 'Admin Dashboard',
     'all_complaints' => 'All Complaints',
@@ -89,14 +89,14 @@ $translations = [
     'cancel' => 'Cancel',
     'search' => 'Search',
     'no_complaints' => 'No complaints found',
-    
+
     // Login
     'login' => 'Login',
     'email' => 'Email',
     'password' => 'Password',
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot Password?',
-    
+
     // Messages
     'complaint_submitted' => 'Your complaint has been submitted successfully!',
     'tracking_id_message' => 'Your tracking ID is:',
@@ -107,12 +107,16 @@ $translations = [
     'login_success' => 'Login successful!',
     'logout_success' => 'Logout successful!',
     'error' => 'An error occurred. Please try again.',
-    
+
     // Validation
     'required' => 'This field is required.',
     'invalid_email' => 'Please enter a valid email address.',
     'invalid_phone' => 'Please enter a valid phone number.',
     'file_too_large' => 'File is too large. Maximum size is 5MB.',
     'invalid_file_type' => 'Invalid file type. Allowed types: jpg, jpeg, png, pdf, doc, docx.',
+
+    // 404 Page
+    'page_not_found' => 'Page Not Found',
+    'page_not_found_message' => 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.',
 ];
 ?>

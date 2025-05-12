@@ -1,0 +1,17 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the base directory
+RewriteBase /admin/
+
+# Custom error pages
+ErrorDocument 404 /admin/404.php
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|.*\.sql)">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

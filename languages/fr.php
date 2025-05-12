@@ -1,7 +1,7 @@
 <?php
 /**
  * French Language File
- * 
+ *
  * This file contains all the translations for the French language.
  */
 
@@ -16,7 +16,7 @@ $translations = [
     'dark_mode' => 'Mode Sombre',
     'light_mode' => 'Mode Clair',
     'language' => 'Langue',
-    
+
     // Homepage
     'welcome_message' => 'Bienvenue au Système de Plaintes Citoyennes',
     'welcome_subtitle' => 'Une plateforme électronique pour soumettre et suivre les plaintes des citoyens',
@@ -30,7 +30,7 @@ $translations = [
     'step_3_desc' => 'Utilisez votre identifiant de suivi pour vérifier l\'état de votre plainte',
     'step_4' => 'Soyez notifié',
     'step_4_desc' => 'Recevez des notifications par e-mail lorsque l\'état de votre plainte est mis à jour',
-    
+
     // Complaint Form
     'complaint_form' => 'Formulaire de Plainte',
     'personal_info' => 'Informations Personnelles',
@@ -46,7 +46,7 @@ $translations = [
     'attachment_help' => 'Téléchargez des photos ou des documents liés à votre plainte (Max: 5MB)',
     'submit' => 'Soumettre',
     'reset' => 'Réinitialiser',
-    
+
     // Complaint Types
     'select_type' => 'Sélectionner le Type',
     'roads' => 'Routes et Infrastructure',
@@ -57,7 +57,7 @@ $translations = [
     'water' => 'Eau et Assainissement',
     'noise' => 'Pollution Sonore',
     'other' => 'Autre',
-    
+
     // Tracking
     'tracking_title' => 'Suivre Votre Plainte',
     'tracking_id' => 'ID de Suivi',
@@ -67,13 +67,13 @@ $translations = [
     'submission_date' => 'Date de Soumission',
     'last_update' => 'Dernière Mise à Jour',
     'admin_response' => 'Réponse de l\'Administrateur',
-    
+
     // Status
     'new' => 'Nouvelle',
     'in_progress' => 'En Cours',
     'resolved' => 'Résolue',
     'rejected' => 'Rejetée',
-    
+
     // Admin
     'admin_dashboard' => 'Tableau de Bord Admin',
     'all_complaints' => 'Toutes les Plaintes',
@@ -89,14 +89,14 @@ $translations = [
     'cancel' => 'Annuler',
     'search' => 'Rechercher',
     'no_complaints' => 'Aucune plainte trouvée',
-    
+
     // Login
     'login' => 'Connexion',
     'email' => 'Email',
     'password' => 'Mot de Passe',
     'remember_me' => 'Se Souvenir de Moi',
     'forgot_password' => 'Mot de Passe Oublié?',
-    
+
     // Messages
     'complaint_submitted' => 'Votre plainte a été soumise avec succès!',
     'tracking_id_message' => 'Votre ID de suivi est:',
@@ -107,12 +107,16 @@ $translations = [
     'login_success' => 'Connexion réussie!',
     'logout_success' => 'Déconnexion réussie!',
     'error' => 'Une erreur s\'est produite. Veuillez réessayer.',
-    
+
     // Validation
     'required' => 'Ce champ est obligatoire.',
     'invalid_email' => 'Veuillez entrer une adresse email valide.',
     'invalid_phone' => 'Veuillez entrer un numéro de téléphone valide.',
     'file_too_large' => 'Le fichier est trop volumineux. La taille maximale est de 5MB.',
     'invalid_file_type' => 'Type de fichier invalide. Types autorisés: jpg, jpeg, png, pdf, doc, docx.',
+
+    // 404 Page
+    'page_not_found' => 'Page Non Trouvée',
+    'page_not_found_message' => 'La page que vous recherchez a peut-être été supprimée, son nom a changé ou est temporairement indisponible.',
 ];
 ?>
